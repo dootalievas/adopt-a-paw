@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useGlobalState } from "./context/GlobalStateProvider";
+import LoginPage from "./components/LoginPage";
+import SelectBreed from "./components/SelectBreed";
+import DogsTable from "./components/DogsTable";
+import Navbar from "./components/Navbar";
+import Pagination from "./components/Pagination";
+import Loading from "./components/Loading";
+import UserMatch from "./components/UserMatch";
+import ShowFavoritesButton from "./components/ShowFavoritesButton";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
+  const { isAuthenticated, isLoading, showMatch } = useGlobalState();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex items-center justify-center overflow-auto bg-white">
+      {!isAuthenticated ? (
+        <LoginPage />
+      ) : (
+        <div className="w-full bg-slate-50 ">
+          <Navbar />
+
+          {isLoading ? (
+            <Loading />
+          ) : (
+            <div className="w-full p-8 bg-slate-50 min-h-screen">
+              <div className="flex justify-center items-center gap-8">
+                <SelectBreed />
+                <ShowFavoritesButton />
+              </div>
+              {showMatch ? (
+                <UserMatch />
+              ) : (
+                <>
+                  <DogsTable />
+                  <Pagination />
+                </>
+              )}
+            </div>
+          )}
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }
-
-export default App;
