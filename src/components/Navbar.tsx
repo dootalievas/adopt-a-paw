@@ -11,6 +11,7 @@ function Navbar() {
                 <div className="text-orange-600 text-3xl font-bold flex items-center">
                     <p>Adopt a Paw</p>
                     <iframe
+                        title='paws'
                         className="w-14 h-14"
                         src="https://lottie.host/embed/d2273154-70ba-4a69-85ed-824d5f41456e/mtxH1aeFZ9.json"
                     ></iframe>

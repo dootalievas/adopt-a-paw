@@ -11,11 +11,13 @@ const UserMatch = () => {
         <div >
             <div className="flex flex-col items-center md:flex-row md:justify-center gap-4 mb-6">
                 <iframe
+                    title='paws'
                     className="w-24 h-24"
                     src="https://lottie.host/embed/d2273154-70ba-4a69-85ed-824d5f41456e/mtxH1aeFZ9.json"
                 ></iframe>
                 <p className="text-center text-3xl md:text-6xl p-2 md:p-4">{'Your matching paws!'}</p>
                 <iframe
+                    title='paws'
                     className="w-24 h-24"
                     src="https://lottie.host/embed/d2273154-70ba-4a69-85ed-824d5f41456e/mtxH1aeFZ9.json"
                 ></iframe>

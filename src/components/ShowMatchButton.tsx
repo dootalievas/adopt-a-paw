@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '@headlessui/react'
 import { useGlobalState } from '../context/GlobalStateProvider'
 
-const ShowFavoritesButton = () => {
+const ShowMatchButton = () => {
     const { handleClick, btnText } = useGlobalState()
 
     return (
@@ -12,4 +12,4 @@ const ShowFavoritesButton = () => {
     )
 }
 
-export default ShowFavoritesButton
+export default ShowMatchButton

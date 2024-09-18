@@ -31,11 +31,13 @@ const DogsTable = ({ }) => {
                 <iframe
                     className="w-24 h-24"
                     src="https://lottie.host/embed/d2273154-70ba-4a69-85ed-824d5f41456e/mtxH1aeFZ9.json"
+                    title='paws'
                 ></iframe>
                 <p className="text-center text-3xl md:text-6xl p-2 md:p-4">Available paws</p>
                 <iframe
                     className="w-24 h-24"
                     src="https://lottie.host/embed/d2273154-70ba-4a69-85ed-824d5f41456e/mtxH1aeFZ9.json"
+                    title='paws'
                 ></iframe>
             </div>
             <div className="overflow-x-auto">

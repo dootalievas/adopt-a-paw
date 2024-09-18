@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Pagination from "./components/Pagination";
 import Loading from "./components/Loading";
 import UserMatch from "./components/UserMatch";
-import ShowFavoritesButton from "./components/ShowFavoritesButton";
+import ShowMatchButton from "./components/ShowMatchButton";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
             <div className="w-full p-8 bg-slate-50 min-h-screen">
               <div className="flex justify-center items-center gap-8">
                 <SelectBreed />
-                <ShowFavoritesButton />
+                <ShowMatchButton />
               </div>
               {showMatch ? (
                 <UserMatch />
